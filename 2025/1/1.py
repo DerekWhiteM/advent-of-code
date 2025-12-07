@@ -1,18 +1,17 @@
 class Dial:
 
-    MAX = 99
+    NUM_POSITIONS = 100
 
-    def __init__(self, start):
-        self.start = start
-        self.current = start
+    def __init__(self, position):
+        self.position = position
 
     def rotateLeft(self, num):
-        self.current = (self.current - num) % (self.MAX + 1)
-        return self.current
+        self.position = (self.position - num) % (self.NUM_POSITIONS)
+        return self.position
     
     def rotateRight(self, num):
-        self.current = (self.current + num) % (self.MAX + 1)
-        return self.current
+        self.position = (self.position + num) % (self.NUM_POSITIONS)
+        return self.position
 
 dial = Dial(50)
 countZeros = 0
