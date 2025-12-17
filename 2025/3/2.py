@@ -12,13 +12,13 @@ def getMaxJoltage(bank):
                 break
     return int("".join(joltageArray))
 
-sum = 0
+total = 0
 
 with open('input.txt', 'r') as file:
     for line in file:
         line = line.strip()
         bank = list(line)
         joltage = getMaxJoltage(bank)
-        sum += joltage 
+        total += joltage 
 
 print(sum)
