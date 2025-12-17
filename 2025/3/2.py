@@ -21,4 +21,4 @@ with open('input.txt', 'r') as file:
         joltage = getMaxJoltage(bank)
         total += joltage 
 
-print(sum)
+print(total)
